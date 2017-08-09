@@ -1,11 +1,11 @@
 # README
 
-Collaboration of the May and July Cohorts
+Collaboration of the May and July Cohorts Final project for front-end fundamentals 
 
-_ Show what library does as concisely as possible Make sure API is showing
+-Show what library does as concisely as possible Make sure API is showing
 
-_ Short description of motivation  behind creation and maintenance
+-Short description of motivation  behind creation and maintenance
 
-_ Provide code examples
+-Provide code examples
 
-_ Describe & show how to run the tests w/ code examples
+-Describe & show how to run the tests w/ code examples

@@ -112,17 +112,25 @@ let results = [{
   }
 ]
 
-// let fetchOps = {
-//   url: 'url'
-// }
-//
-// fetch(fetchOps)
-//   .then(function(res){
-//     if(res.status < 200 || res.status >= 300){
-//       console.log("Status: ", res.status);
-//     }
-//     // Main function
-//   })
-//   .catch(function(err){
-//     console.log("Error: ", err);
-//   })
+let fetchOps = {
+  url: 'url'
+}
+
+fetch(fetchOps)
+  .then(function(res){
+    if(res.status < 200 || res.status >= 300){
+      console.log("Status: ", res.status);
+    }
+    // Main function
+  })
+  .catch(function(err){
+    console.log("Error: ", err);
+  })
+
+// Fetching
+// window.sessionStorage.token = "asdfohvjeugvuuttvineieovnejvnndxbd";
+
+// Dev Panel > Application > Session Storage > Site > Checkout the token
+// if(window.sessionStorage.token){load eventlist} else {load login};
+
+// Logout: clear token value

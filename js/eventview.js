@@ -8,7 +8,6 @@ function loadEventView() {
   let evtvwLoca = results[0].data.address + ", " + results[0].data.city + ", " + results[0].data.state;
   let evtvwDetails = results[0].data.details;
 
-
   evtvwHeader.innerHTML += `
   <h2 id="logo">Iron Meetups</h2>
   <nav id="nav_links">
@@ -32,7 +31,7 @@ function loadEventView() {
   <h4>Attendees</h4>
   <ul id="attendees"></ul>
   `
-  
+
   let attending = document.getElementById('attendees');
   for (var i = 0; i < results[0].data.attendees.length; i++) {
     let evtvwListItem = document.createElement('li');
@@ -40,6 +39,7 @@ function loadEventView() {
     evtvwListItem.innerHTML = evtvwUserAtt;
     attending.appendChild(evtvwListItem);
   }
+
 }
 
 loadEventView();

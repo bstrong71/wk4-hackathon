@@ -48,5 +48,45 @@ table {
 }
 
 body {
-	
+font-family: "Open Sans", sans-serif;
+}
+
+
+/*******  Header Styling *******/
+
+#nav_bar {
+	border: 1px solid black;
+	background-color: lightgray;
+	display: flex;
+	height: 75px;
+	justify-content: space-between;
+}
+
+#nav_links {
+	align-items: center;
+	display: flex;
+
+}
+
+#logo {
+	color: gray;
+	font-size: 28px;
+	padding: 22px 0px 0px 15px;
+}
+
+.nav_buttons {
+
+	background-color: #fff;
+	border: 1px solid black;
+	border-radius: 5px;
+	color: gray;
+	font-size: 18px;
+	margin: 15px;
+	padding: 8px 30px;
+}
+
+/******* Event_list Styling *******/
+
+#main_content {
+
 }

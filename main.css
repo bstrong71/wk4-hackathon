@@ -89,6 +89,7 @@ font-family: "Open Sans", sans-serif;
 
 #main_content {
 display: flex;
+flex-flow: row wrap;
 justify-content: space-around;
 margin: 40px auto;
 }

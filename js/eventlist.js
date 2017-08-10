@@ -1,15 +1,15 @@
 let body = document.getElementsByTagName("body");
 
 
-
-
 function loadEventList() {
+
+  document.body.innerHTML = ``;
 
   document.body.innerHTML += `<header id="nav_bar">
                                 <h2 id="logo">Iron Meetups</h2>
                                 <nav id="nav_links">
-                                  <div class="nav_buttons">Events</div>
-                                  <div class="nav_buttons">Log Out</div>
+                                  <div id="events_button" class="nav_buttons">Events</div>
+                                  <div id="logout_button" class="nav_buttons">Log Out</div>
                                 </nav>
                               </header>
                               <main id="main_content">
@@ -24,7 +24,9 @@ function loadEventList() {
         }
         response.json().then(function(data) {
           console.log("Here is the data:", data);
-
+//
+//  once api is created, change results.length to data
+//
           for (var i = 0; i < results.length; i++) {
 
             let mainContent = document.getElementById("main_content");
@@ -38,7 +40,7 @@ function loadEventList() {
                                       </div>
                                       <div class="button_container">
                                         <div class="event_buttons">Click to RSVP</div>
-                                        <div class="event_buttons">View Event Info</div>
+                                        <div class="event_buttons" value="${i}">View Event Info</div>
                                       </div>
                                     </article>
                                     `
@@ -51,9 +53,8 @@ function loadEventList() {
       console.log("Fetch Error :-S", err);
     });
 
-
-
-
+    let eventButton = document.getElementById("events_button");
+    eventButton.addEventListener("click", loadEventList);
 }
 
 loadEventList();

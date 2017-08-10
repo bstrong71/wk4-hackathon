@@ -1,6 +1,6 @@
-# README
+# WEEK FOUR HACKATHON
 
-Collaboration of the May and July Cohorts Final project for front-end fundamentals 
+Collaboration of the May and July Cohorts Final project for front-end fundamentals
 
 -Show what library does as concisely as possible Make sure API is showing
 

@@ -7,11 +7,11 @@ function loadLogin(){
   document.body.innerHTML +=
   `
   <section id="loginContainer">
-    <h1>Iron Meetups!</h1>
-    <h3>Please Sign Up!</h3>
+    <h1>Iron Meetups</h1>
+    <h3>Please Log In</h3>
     <form>
-      <input id="loginEmail" type="text" name="email" placeholder="Email Address" required>
-      <input id="loginPassword" type="text" name="password" placeholder="Password" required>
+      <input id="loginEmail" type="email" name="email" placeholder="Email Address" required>
+      <input id="loginPassword" type="password" name="password" placeholder="Password" required>
       <button id="loginSignUp" type="button" name="signUp">Sign Up!</button>
       <button id="loginLogin" class="active" type="button" name="login">Login</button>
     </form>

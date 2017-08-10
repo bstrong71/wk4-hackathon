@@ -131,3 +131,54 @@ margin: 40px auto;
 	background-color: #4990e2;
 	color: white;
 }
+
+/******* Event View Styling *******/
+#eventBody{
+	display: flex;
+	flex-flow: row nowrap;
+	padding: 40px;
+}
+
+#leftContainer{
+	border-right: 2px solid grey;
+	flex: 1 1 60%;
+	padding: 20px;
+}
+
+#rightContainer{
+	flex: 1 1 40%;
+	padding: 20px;
+	padding-top: 20px;
+	text-align: center;
+}
+
+h1{
+	font-size: 3em;
+	font-weight: 700;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+h4{
+	font-size: 1.5em;
+	font-weight: 700;
+}
+
+p{
+	font-style: italic;
+	margin: 20px 20px 20px 30px;
+}
+
+ul{
+	margin-top: 30px;
+}
+
+li{
+	border: 1px solid grey;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+	margin: 20px;
+	margin-left: 60px;
+	padding: 20px;
+	font-style: italic;
+	text-align: left;
+}

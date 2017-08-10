@@ -3,48 +3,31 @@ let input = document.getElementById('input');
 let signUpButton = document.getElementById('signUpSignUp');
 let logInButton = document.getElementById('signUplogin')
 
-
-function loadSignUp(){
-  // document.body.innerHTML +=
-  // `
-  // <section id="loginContainer">
-  //       <h1>Iron Meetups!</h1>
-  //       <h3>Please Sign Up!</h3>
-  //
-  //       <form class="" action="" method="get">
-  //
-  //         <input type="text" name="" value="" placeholder="Username">
-  //         <input type="text" name="" value="" placeholder="Password">
-  //         <input type="text" name="" value="" placeholder="Confirm Password">
-  //         <button id="signUp" class="active" type="button" name="signUp">Sign Up!</button>
-  //         <button id="login" class="" type="button" name="login">Login</button>
-  //       </form>
-  //
-  //     </section>
-  //     <script src="../js/signup.js"></script>
-  // `
-}
-
 function createAccount(){
   let post = {
-    url: url,
+    url: "http:swapi.co",
     method:"post",
     body: {
       email: document.getElementById('userSignUp').value,
       password: document.getElementById('passSignUp').value,
       firstName: document.getElementById('firstSignUp').value,
       lastName: document.getElementById('lastSignUp').value
-
     }
+  }
+  fetch(post).then(function (response) {
+    if (response.status === 200){
+      window.location.href = "eventlist.html";
+      return response;
+      console.log("im here");
+    } else {
 
-    fetch(post).then(response)
-      if (response.status === 200){
-        return response;
-      } catch(function(error) {
       console.log("Request failed", error);
- });
+    }
+  }).catch(function(error) {
+
+  })
 }
-}
+
 
 signUpButton.addEventListener("click", function(){
   let email = document.getElementById('userSignUp').value;
@@ -55,14 +38,14 @@ signUpButton.addEventListener("click", function(){
 
   if(!email || !password || !confirm || !first || !last){
       console.log("You done done it wrong");
-  } else if((email.indexOf("@") === -1) || (email.indexOf(".") === -1)){
-    console.log("Please enter a valid email address");
+  // } else if((email.indexOf("@") === -1) || (email.indexOf(".") === -1)){
+  //   console.log("Please enter a valid email address");
   } else {
     console.log("You done done it right");
     if (password === confirm){
       console.log("match!");
 
-createAccount();
+       createAccount();
 
 
       // fetch POST
@@ -76,12 +59,7 @@ createAccount();
   }
 
 })
-
-
-
 console.log("clicked");
-
-// let loadLogIn = document.createElement("a");
 
 logInButton.addEventListener("click", function(event){
   window.location.href = "login.html";
@@ -89,5 +67,3 @@ logInButton.addEventListener("click", function(event){
   event.preventDefault();
 
 })
-
-// loadSignUp();

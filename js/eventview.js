@@ -3,12 +3,11 @@ function loadEventView() {
   let leftContainer = document.getElementById('leftContainer');
   let rightContainer = document.getElementById('rightContainer');
 
-
-
   let evtvwName = results[0].data.name;
   let evtvwDate = results[0].data.date;
   let evtvwLoca = results[0].data.address + ", " + results[0].data.city + ", " + results[0].data.state;
   let evtvwDetails = results[0].data.details;
+
 
   evtvwHeader.innerHTML += `
   <h2 id="logo">Iron Meetups</h2>
@@ -31,15 +30,16 @@ function loadEventView() {
 
   rightContainer.innerHTML += `
   <h4>Attendees</h4>
-  <ul id="attendees">
-    <li class="attender">User Name</li>
-    <li class="attender">User Name</li>
-    <li class="attender">User Name</li>
-    <li class="attender">User Name</li>
-    <li class="attender">User Name</li>
-    <li class="attender">User Name</li>
-  </ul>
+  <ul id="attendees"></ul>
   `
+  
+  let attending = document.getElementById('attendees');
+  for (var i = 0; i < results[0].data.attendees.length; i++) {
+    let evtvwListItem = document.createElement('li');
+    let evtvwUserAtt = results[0].data.attendees[i].username;
+    evtvwListItem.innerHTML = evtvwUserAtt;
+    attending.appendChild(evtvwListItem);
+  }
 }
 
 loadEventView();

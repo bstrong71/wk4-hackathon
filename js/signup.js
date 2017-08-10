@@ -26,28 +26,34 @@ function loadSignUp(){
 }
 
 function createAccount(){
-  let post ={
+  let post = {
     url: url,
     method:"post",
     body: {
       email: document.getElementById('userSignUp').value,
       password: document.getElementById('passSignUp').value,
+      firstName: document.getElementById('firstSignUp').value,
+      lastName: document.getElementById('lastSignUp').value
+
     }
 
-  fetch(post).then(response)
-    return response;
-
-    .catch(function(error) {
+    fetch(post).then(response)
+      if (response.status === 200){
+        return response;
+      } catch(function(error) {
       console.log("Request failed", error);
  });
+}
 }
 
 signUpButton.addEventListener("click", function(){
   let email = document.getElementById('userSignUp').value;
   let password = document.getElementById('passSignUp').value;
   let confirm = document.getElementById('confirmSignUp').value;
+  let first = document.getElementById('firstSignUp').value;
+  let last = document.getElementById('lastSignUp').value;
 
-  if(!email || !password || !confirm){
+  if(!email || !password || !confirm || !first || !last){
       console.log("You done done it wrong");
   } else if((email.indexOf("@") === -1) || (email.indexOf(".") === -1)){
     console.log("Please enter a valid email address");
@@ -55,6 +61,10 @@ signUpButton.addEventListener("click", function(){
     console.log("You done done it right");
     if (password === confirm){
       console.log("match!");
+
+createAccount();
+
+
       // fetch POST
         //if status === 200 {loadNextPage}
         //else {some kind of visible error for the user}

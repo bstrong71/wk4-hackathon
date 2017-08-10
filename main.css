@@ -56,7 +56,7 @@ font-family: "Open Sans", sans-serif;
 
 #nav_bar {
 	border: 1px solid black;
-	background-color: lightgray;
+	background-color: #d8d8d8;
 	display: flex;
 	height: 75px;
 	justify-content: space-between;
@@ -69,7 +69,7 @@ font-family: "Open Sans", sans-serif;
 }
 
 #logo {
-	color: gray;
+	color: #74777e;
 	font-size: 28px;
 	padding: 22px 0px 0px 15px;
 }
@@ -88,5 +88,46 @@ font-family: "Open Sans", sans-serif;
 /******* Event_list Styling *******/
 
 #main_content {
+display: flex;
+justify-content: space-around;
+margin: 40px auto;
+}
 
+.each_container {
+	border: 1px solid black;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+	display: flex;
+	justify-content: space-between;
+	margin: 10px 20px;
+	border-radius: 5px;
+	flex-basis: 40%;
+}
+
+.event_details {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	padding: 20px;
+}
+
+.event_details h2 {
+	margin-bottom: 35px;
+	font-size: 24px;
+	font-weight: bold;
+	flex: 1 1 90%;
+}
+
+.event_buttons {
+	border: 1px solid black;
+	padding: 20px 5px;
+	text-align: center;
+}
+
+.event_buttons:first-child {
+	background-color: #7ed320;
+}
+
+.event_buttons:nth-child(2) {
+	background-color: #4990e2;
+	color: white;
 }

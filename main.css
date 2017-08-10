@@ -65,7 +65,6 @@ font-family: "Open Sans", sans-serif;
 #nav_links {
 	align-items: center;
 	display: flex;
-
 }
 
 #logo {
@@ -75,7 +74,6 @@ font-family: "Open Sans", sans-serif;
 }
 
 .nav_buttons {
-
 	background-color: #fff;
 	border: 1px solid black;
 	border-radius: 5px;
@@ -109,6 +107,7 @@ margin: 40px auto;
 	flex-flow: row wrap;
 	justify-content: space-between;
 	padding: 20px;
+	padding-bottom: 0px;
 }
 
 .event_details h2 {
@@ -118,10 +117,20 @@ margin: 40px auto;
 	flex: 1 1 90%;
 }
 
+.event_details p {
+	margin-left: 0px;
+	margin-top: 0px;
+}
+
+.button_container {
+	width: 35%;
+}
+
 .event_buttons {
 	border: 1px solid black;
-	padding: 20px 5px;
+	padding: 10px 20px;
 	text-align: center;
+	line-height: 1.2;
 }
 
 .event_buttons:first-child {

@@ -137,12 +137,17 @@ margin: 40px auto;
 	display: flex;
 	flex-flow: row nowrap;
 	padding: 40px;
+	padding-top: 60px;
 }
 
 #leftContainer{
 	border-right: 2px solid grey;
 	flex: 1 1 60%;
-	padding: 20px;
+	padding: 0 20px 20px 20px;
+}
+
+#evtvwDetails{
+	margin-right: 55px;
 }
 
 #rightContainer{

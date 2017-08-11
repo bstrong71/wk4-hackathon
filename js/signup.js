@@ -3,9 +3,32 @@ let input = document.getElementById('input');
 let signUpButton = document.getElementById('signUpSignUp');
 let logInButton = document.getElementById('signUplogin')
 
+function loadSignUp(){
+  clearBody();
+  document.body.innerHTML +=
+  `
+  <section id="loginContainer">
+    <h1>Iron Meetups</h1>
+    <h3>Please Sign Up</h3>
+
+    <form class="" action="" method="get">
+      <input type="text" id="firstSignUp" name="" value="" placeholder="First Name">
+      <input type="text" id="lastSignUp" name="" value="" placeholder="Last Name">
+      <input type="email" id="userSignUp" name="" value="" placeholder="Email address">
+      <input type="password" id="passSignUp" name="" value="" placeholder="Password">
+      <input type="password" id="confirmSignUp" name="" value="" placeholder="Confirm Password">
+      <button id="signUpSignUp" class="active" type="button" name="signUp">Sign Up!</button>
+      <button id="signUplogin" class="" type="submit" name="login">Login</button>
+    </form>
+
+  </section>
+  <script src="./main.js"></script>
+  `
+}
+
 function createAccount(){
   let post = {
-    url: "http:swapi.co",
+    url: "url",
     method:"post",
     body: {
       email: document.getElementById('userSignUp').value,
@@ -38,8 +61,8 @@ signUpButton.addEventListener("click", function(){
 
   if(!email || !password || !confirm || !first || !last){
       console.log("You done done it wrong");
-  // } else if((email.indexOf("@") === -1) || (email.indexOf(".") === -1)){
-  //   console.log("Please enter a valid email address");
+  } else if((email.indexOf("@") === -1) || (email.indexOf(".") === -1)){
+    console.log("Please enter a valid email address");
   } else {
     console.log("You done done it right");
     if (password === confirm){
@@ -61,9 +84,4 @@ signUpButton.addEventListener("click", function(){
 })
 console.log("clicked");
 
-logInButton.addEventListener("click", function(event){
-  window.location.href = "login.html";
-  console.log(window.location)
-  event.preventDefault();
-
-})
+logInButton.addEventListener("click", loadLogin);

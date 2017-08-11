@@ -5,6 +5,7 @@ function loadEventView() {
 
   let evtvwName = results[0].data.name;
   let evtvwDate = results[0].data.date;
+  let evtvwTime = results[0].data.time;
   let evtvwLoca = results[0].data.address + ", " + results[0].data.city + ", " + results[0].data.state;
   let evtvwDetails = results[0].data.details;
 
@@ -20,7 +21,7 @@ function loadEventView() {
   <h1 id="evtvwName">${evtvwName}</h1>
   <div id="evtvwInfo">
     <h4>When?</h4>
-    <p id="evtvwDate">${evtvwDate}</p>
+    <p id="evtvwDate">${evtvwDate} at ${evtvwTime}</p>
     <h4>Where?</h4>
     <p id="evtvwLoca">${evtvwLoca}</p>
     <h4>What is this all about?</h4>
